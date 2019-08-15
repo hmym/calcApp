@@ -9,10 +9,59 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var firstCount = 0
+    var secondCount = 0
+    var sumCount = 0
+    
+    @IBOutlet weak var sumLabel: UILabel!
+    
+    @IBOutlet weak var firstCountField: UITextField!
+    
+    @IBOutlet weak var secondCountField: UITextField!
+    
+    @IBAction func plusButtonAction(_ sender: Any) {
+        let firstCount = Int(firstCountField.text!)
+        let secondCount = Int(secondCountField.text!)
+        let plusSum = firstCount! + secondCount!
+        sumLabel.text = String(plusSum)
+    }
+    
+    @IBAction func minusButtonAction(_ sender: Any) {
+        let firstCount = Int(firstCountField.text!)
+        let secondCount = Int(secondCountField.text!)
+        let minusSum = firstCount! - secondCount!
+        sumLabel.text = String(minusSum)
+    }
+    
+    @IBAction func delButtonAction(_ sender: Any) {
+        firstCount = 0
+        secondCount = 0
+        sumCount = 0
+        firstCountField.text = String(firstCount)
+        secondCountField.text = String(secondCount)
+        sumLabel.text = String(sumCount)
+    }
+    
+    @IBAction func kakeruButtonAction(_ sender: Any) {
+        let firstCount = Int(firstCountField.text!)
+        let secondCount = Int(secondCountField.text!)
+        let kakeruSum = firstCount! * secondCount!
+        sumLabel.text = String(kakeruSum)
+    }
+    
+    @IBAction func waruButtonAction(_ sender: Any) {
+        let firstCount = Int(firstCountField.text!)
+        let secondCount = Int(secondCountField.text!)
+        let waruSum = firstCount! / secondCount!
+        sumLabel.text = String(waruSum)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        firstCountField.text = String(firstCount)
+        secondCountField.text = String(secondCount)
+        sumLabel.text = String(sumCount)
     }
 
 
