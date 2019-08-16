@@ -26,7 +26,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zCC-NR-DSp">
                                 <rect key="frame" x="234" y="179" width="150" height="30"/>
@@ -36,7 +36,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="plus" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b8-3U-p3C">
                                 <rect key="frame" x="72" y="314" width="30" height="48"/>
@@ -90,14 +90,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="zCC-NR-DSp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="135" id="0gG-xC-DGs"/>
                             <constraint firstItem="rUj-d7-Rma" firstAttribute="leading" secondItem="E90-Iu-SMb" secondAttribute="trailing" constant="30" id="4Dy-yg-RdZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G79-QU-TVw" secondAttribute="trailing" id="7qP-Bw-mZa"/>
-                            <constraint firstItem="zCC-NR-DSp" firstAttribute="top" secondItem="G79-QU-TVw" secondAttribute="bottom" constant="45" id="9e4-oc-E3V"/>
                             <constraint firstItem="5tT-L7-eBb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="B9h-Ur-8IR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zCC-NR-DSp" secondAttribute="trailing" constant="30" id="Fr0-Jg-qwy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8b8-3U-p3C" secondAttribute="bottom" constant="500" id="FwC-c7-qD8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BhX-Yr-LaN" secondAttribute="bottom" constant="500" id="GDd-ny-Egi"/>
-                            <constraint firstItem="5tT-L7-eBb" firstAttribute="top" secondItem="G79-QU-TVw" secondAttribute="bottom" constant="45" id="Gn3-si-Ptx"/>
+                            <constraint firstItem="5tT-L7-eBb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="135" id="JNg-V4-53m"/>
                             <constraint firstItem="QqV-9q-JvS" firstAttribute="leading" secondItem="rUj-d7-Rma" secondAttribute="trailing" constant="30" id="aMl-3t-S0W"/>
                             <constraint firstItem="BhX-Yr-LaN" firstAttribute="leading" secondItem="QqV-9q-JvS" secondAttribute="trailing" constant="30" id="cxA-F0-PCa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rUj-d7-Rma" secondAttribute="bottom" constant="500" id="eMe-bR-saC"/>

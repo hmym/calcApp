@@ -12,7 +12,8 @@ class ViewController: UIViewController {
    
     var firstCount = 0
     var secondCount = 0
-    var sumCount = 0
+//    var sumCount = 0
+    var sum = 0
      /*
     func sum() {
         let firstCount = Int(firstCountField.text!)
@@ -43,26 +44,49 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var firstCountField: UITextField!
     
+    
     @IBOutlet weak var secondCountField: UITextField!
     
     // UIButtonを選択、すべてのボタンをここに関連づける
     @IBAction func setButton(_ sender: UIButton) {
-        // firstCount,secondCountに値があれば処理を行う
+        // firstCount,secondCountにInt型の値がセットできたらswitch文を実行
         if let firstCount = Int(firstCountField.text!), let secondCount = Int(secondCountField.text!) {
+            
+           
+            
             switch sender.titleLabel?.text{
                 case "+":
+                    sum = firstCount + secondCount
+                    /* check()関数を使用した場合、すべてのボタンに以下の２行を追加する
                     sumLabel.text = String(firstCount + secondCount)
+                    check(num: firstCount + secondCount)
+                    */
                 case "-":
-                    sumLabel.text = String(firstCount - secondCount)
+                    sum = firstCount - secondCount
                 case "×":
-                    sumLabel.text = String(firstCount * secondCount)
+                    sum = firstCount * secondCount
                 case "÷":
-                    sumLabel.text = String(firstCount / secondCount)
+                    sum = firstCount / secondCount
                 default:
                     firstCountField.text = ""
                     secondCountField.text = ""
                     sumLabel.text = "0"
             }
+            switch sum % 2 {
+            case 0 :
+                sumLabel.text = String(sum) + " 偶数"
+            default:
+                sumLabel.text = String(sum) + " 奇数"
+            }
+        }
+    }
+    // ボタンの処理の中に呼び出すことにより実行される
+    func check(num: Int) {
+        switch num.isMultiple(of: 2) {
+        case true:
+            sumLabel.text! += "偶数"
+        default:
+            sumLabel.text! += "偶数"
         }
     }
     
@@ -126,6 +150,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.d
         sumLabel.text = "0"
+        firstCountField.keyboardType = UIKeyboardType.numberPad
+        secondCountField.keyboardType = UIKeyboardType.numberPad
 //        firstCountField.text = String(firstCount)
 //        secondCountField.text = String(secondCount)
 //        sumLabel.text = String(sumCount)
