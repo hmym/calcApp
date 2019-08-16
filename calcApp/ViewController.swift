@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var firstCount = 0
     var secondCount = 0
 //    var sumCount = 0
-    var sum = 0
+//    var sum = 0
      /*
     func sum() {
         let firstCount = Int(firstCountField.text!)
@@ -56,37 +56,48 @@ class ViewController: UIViewController {
             
             switch sender.titleLabel?.text{
                 case "+":
-                    sum = firstCount + secondCount
-                    /* check()関数を使用した場合、すべてのボタンに以下の２行を追加する
+//                    sum = firstCount + secondCount
+                    // check()関数を使用した場合、すべてのボタンに以下の２行を追加する
                     sumLabel.text = String(firstCount + secondCount)
                     check(num: firstCount + secondCount)
-                    */
+                
                 case "-":
-                    sum = firstCount - secondCount
+//                    sum = firstCount - secondCount
+                    sumLabel.text = String(firstCount - secondCount)
+                    check(num: firstCount - secondCount)
                 case "×":
-                    sum = firstCount * secondCount
+//                    sum = firstCount * secondCount
+                    sumLabel.text = String(firstCount * secondCount)
+                    check(num: firstCount * secondCount)
                 case "÷":
-                    sum = firstCount / secondCount
+//                    sum = firstCount / secondCount
+                    sumLabel.text = String(firstCount / secondCount)
+                    check(num: firstCount / secondCount)
+                // clearボタンを押した時の処理
                 default:
                     firstCountField.text = ""
                     secondCountField.text = ""
                     sumLabel.text = "0"
             }
-            switch sum % 2 {
-            case 0 :
-                sumLabel.text = String(sum) + " 偶数"
-            default:
-                sumLabel.text = String(sum) + " 奇数"
-            }
+//            switch sum % 2 {
+//            case 0 :
+//                sumLabel.text = String(sum) + " 偶数"
+//            default:
+//                sumLabel.text = String(sum) + " 奇数"
+//            }
         }
     }
     // ボタンの処理の中に呼び出すことにより実行される
     func check(num: Int) {
         switch num.isMultiple(of: 2) {
+        // 2の倍数であれば
         case true:
+            // 偶数と表示する
             sumLabel.text! += "偶数"
+        // 2の倍数でなければ
         default:
-            sumLabel.text! += "偶数"
+            // 奇数で表示する
+            sumLabel.text! += "奇数"
         }
     }
     
