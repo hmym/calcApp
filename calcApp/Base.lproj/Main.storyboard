@@ -38,20 +38,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b8-3U-p3C">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" restorationIdentifier="plus" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b8-3U-p3C">
                                 <rect key="frame" x="72" y="314" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="plusButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4SW-PQ-M53"/>
+                                    <action selector="setButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jkp-3f-Ia1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E90-Iu-SMb">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E90-Iu-SMb">
                                 <rect key="frame" x="132" y="314" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="-"/>
                                 <connections>
-                                    <action selector="minusButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cao-4P-e5E"/>
+                                    <action selector="setButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jkq-yx-MfT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUj-d7-Rma">
@@ -59,23 +59,23 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="C"/>
                                 <connections>
-                                    <action selector="delButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PYh-5n-zg4"/>
+                                    <action selector="setButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hEa-km-c54"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqV-9q-JvS">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqV-9q-JvS">
                                 <rect key="frame" x="252" y="314" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="×"/>
                                 <connections>
-                                    <action selector="kakeruButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lze-cC-jja"/>
+                                    <action selector="setButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pn3-wO-Poj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhX-Yr-LaN">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhX-Yr-LaN">
                                 <rect key="frame" x="312" y="314" width="30" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="÷"/>
                                 <connections>
-                                    <action selector="waruButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="apM-sj-9Di"/>
+                                    <action selector="setButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PWI-Dt-S0L"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G79-QU-TVw">
